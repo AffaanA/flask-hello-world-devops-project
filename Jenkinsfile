@@ -33,10 +33,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-                sh 'minikube kubectl -- apply -f deployment.yaml'
-                sh 'minikube kubectl -- apply -f service.yaml'
-            }
+                echo 'Skipping Kubernetes deploy for now. . .'            }
         }
     }
 }
